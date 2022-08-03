@@ -1,8 +1,13 @@
 import React from 'react'
 import '../styles/AddButtonStyle.css'
+import { Link } from 'react-router-dom'
 
 export default function AddButton() {
   return (
-    <button>Add Token</button>
+    <Link to="/add-token">
+      <button>
+        Add Token
+      </button>
+    </Link> 
   )
 }
