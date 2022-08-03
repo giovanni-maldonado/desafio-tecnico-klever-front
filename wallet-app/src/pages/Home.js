@@ -1,7 +1,7 @@
 import React from 'react'
-import { ReactComponent as LogoIcon } from '../assets/logo.svg'
 import '../styles/HomeStyle.css'
 import AddButton from '../components/AddButton'
+import { ReactComponent as LogoIcon } from '../assets/logo.svg'
 import { ReactComponent as StarIcon } from '../assets/shooting-star.svg'
 
 export default function Home() {
