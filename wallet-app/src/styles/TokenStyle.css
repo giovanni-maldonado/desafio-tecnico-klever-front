@@ -1,0 +1,33 @@
+.form-container {
+  display: flex;
+  width: 300px;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.token-input {
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+.balance-input {
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: white;
+  width: 100%;
+}
