@@ -8,6 +8,6 @@ export default function AddButton() {
       <button>
         Add Token
       </button>
-    </Link> 
+    </Link>
   )
 }
