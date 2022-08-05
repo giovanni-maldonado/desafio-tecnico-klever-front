@@ -27,3 +27,11 @@
   width: 50px;
   padding-right: 5px;
 }
+
+.token-and-balance-container {
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 200;
+}
