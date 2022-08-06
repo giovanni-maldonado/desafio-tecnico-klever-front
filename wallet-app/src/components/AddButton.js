@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function AddButton() {
   return (
     <Link to="/add-token">
-      <button>
+      <button data-testid="add-token-button">
         Add Token
       </button>
     </Link>

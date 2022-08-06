@@ -32,7 +32,7 @@ export default function Home() {
         <ul>
           <p>Token</p>
           {token === 0 || token === null ? <p></p> : token.map((t, index) => (
-          <h1 key={index}><img src={EditIcon} alt="icone de editar" width="20px" color='white' onClick={() => navigate(`/edit-token/${index}`)}/>{t}</h1>))}
+          <h1 key={index}><img src={EditIcon} alt="icone de editar" data-testid="edit-button" width="20px" color='white' onClick={() => navigate(`/edit-token/${index}`)}/>{t}</h1>))}
         </ul>
         <ul>
           <p>Balance</p>
