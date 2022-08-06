@@ -37,3 +37,8 @@ p {
   margin-left: -100px;
   margin-top: 10px;
 }
+
+.error-message {
+  color: red;
+  font-weight: 600;
+}
