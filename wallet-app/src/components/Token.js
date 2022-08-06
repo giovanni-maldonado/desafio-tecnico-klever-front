@@ -8,6 +8,7 @@ export default function Token() {
   const { pathname } = useLocation();
   const [tokenInput, setTokenInput] = useState('')
   const [balanceInput, setBalanceInput] = useState('')
+  const [isVisible, setIsVisible] = useState(false)
   const token = JSON.parse(localStorage.getItem('token'))
   const balance = JSON.parse(localStorage.getItem('balance'))
   const navigate = useNavigate();
@@ -22,12 +23,13 @@ export default function Token() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (tokenInput === '' || balanceInput === '') {
-      alert('Preencha todos os campos')
+    if (tokenInput === '' || balanceInput.length === 0) {
+      setIsVisible(true)
       return false
     }
     if (pathname === '/add-token' && token.includes(tokenInput)) {
-      alert('Token já cadastrado')
+      alert('Token já existe')
+      setIsVisible(true)
       return false
     }
     if (tokenInput.length > 0 && balanceInput.length > 0 && pathname === '/add-token' && !token.includes(tokenInput)) {
@@ -56,12 +58,14 @@ export default function Token() {
 
   return (
     <div className='form-container'>
+      {isVisible ? <p className='error-message' data-testid='error-message'>Preencha todos os campos</p> : null}
       <form>
         <label htmlFor='tokenInput'>
           <p>Token</p>
           <input
             type='text'
             id='tokenInput'
+            data-testid='token-input'
             className='token-input'
             onChange={handleTokenInput}
             required
@@ -72,6 +76,7 @@ export default function Token() {
           <input
             type='number'
             id='balance-input'
+            data-testid='balance-input'
             className='balance-input'
             onChange={handleBalanceInput}
             required
